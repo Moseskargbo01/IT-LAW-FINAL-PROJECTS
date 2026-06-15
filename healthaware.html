@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthAware SL — Digital Health for Sierra Leone</title>
+  <link rel="stylesheet" href="healthaware.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand">
+        <span class="nav__pulse">&#9829;</span>
+        HealthAware <span class="nav__sl">SL</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#home"    class="nav__link" data-tab="home">Home</a></li>
+        <li><a href="#library" class="nav__link" data-tab="library">Health Library</a></li>
+        <li><a href="#alerts"  class="nav__link" data-tab="alerts">Alerts</a></li>
+        <li><a href="#report"  class="nav__link" data-tab="report">Report</a></li>
+        <li><a href="#ask"     class="nav__link nav__link--cta" data-tab="ask">Ask AI</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero__bg-ring hero__bg-ring--1"></div>
+    <div class="hero__bg-ring hero__bg-ring--2"></div>
+    <div class="hero__inner">
+      <div class="hero__eyebrow">
+        <span class="tag tag--mint">SDG 3 · 2 · 6</span>
+        <span class="tag tag--gold">MIT Licensed</span>
+        <span class="tag tag--mint">Open Source DPG</span>
+      </div>
+      <h1 class="hero__title">
+        Health information<br />
+        <em>that reaches everyone</em><br />
+        in Sierra Leone.
+      </h1>
+      <p class="hero__sub">
+        Browse evidence-based health guides, receive outbreak alerts, report symptoms in your
+        community, and get answers from our AI health assistant — one free, open platform.
+      </p>
+      <div class="hero__actions">
+        <a href="#library" class="btn btn--primary">Browse Health Articles</a>
+        <a href="#alerts"  class="btn btn--ghost">View Active Alerts</a>
+      </div>
+    </div>
+    <div class="hero__stats">
+      <div class="stat-card">
+        <span class="stat-card__num">6</span>
+        <span class="stat-card__label">Health Articles</span>
+        <span class="stat-card__icon">📄</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__num">3</span>
+        <span class="stat-card__label">Active Alerts</span>
+        <span class="stat-card__icon">🔔</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__num">3</span>
+        <span class="stat-card__label">SDGs Covered</span>
+        <span class="stat-card__icon">🌍</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__num">AI</span>
+        <span class="stat-card__label">Health Assistant</span>
+        <span class="stat-card__icon">🤖</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ALERT BANNER
+  ══════════════════════════════════════════ -->
+  <div class="alert-banner">
+    <span class="alert-banner__icon">🚨</span>
+    <div class="alert-banner__body">
+      <strong>Active Alert:</strong> Cholera cases reported in parts of Freetown — boil all drinking water and avoid open defecation.
+    </div>
+    <a href="#alerts" class="alert-banner__link">See all alerts →</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HEALTH LIBRARY
+  ══════════════════════════════════════════ -->
+  <section class="section" id="library">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__eyebrow">Knowledge Base</span>
+        <h2 class="section__title">Health Information Library</h2>
+        <p class="section__sub">Evidence-based guides on the issues that matter most in Sierra Leone.</p>
+      </div>
+
+      <div class="filter-bar">
+        <input class="filter-bar__search" type="search" placeholder="Search articles…" id="searchInput" />
+        <div class="filter-bar__tabs" id="categoryTabs">
+          <button class="filter-tab filter-tab--active" data-cat="All">All</button>
+          <button class="filter-tab" data-cat="Prevention">Prevention</button>
+          <button class="filter-tab" data-cat="Maternal">Maternal Health</button>
+          <button class="filter-tab" data-cat="Hygiene">Hygiene</button>
+          <button class="filter-tab" data-cat="Mental">Mental Health</button>
+          <button class="filter-tab" data-cat="Nutrition">Nutrition</button>
+        </div>
+      </div>
+
+      <div class="article-grid" id="articleGrid">
+
+        <!-- Article 1 -->
+        <article class="article-card" data-cat="Prevention" data-title="Malaria Prevention in Sierra Leone">
+          <div class="article-card__meta">
+            <span class="tag tag--green">SDG 3</span>
+            <span class="tag tag--amber">Prevention</span>
+          </div>
+          <h3 class="article-card__title">Malaria Prevention in Sierra Leone</h3>
+          <p class="article-card__excerpt">Malaria remains one of the leading causes of death in Sierra Leone. Using insecticide-treated bed nets, removing stagnant water, and seeking early treatment are the most effective prevention strategies.</p>
+          <div class="article-card__tips">
+            <h4 class="tips__label">Key Tips</h4>
+            <ul class="tips__list">
+              <li>Sleep under treated mosquito nets every night</li>
+              <li>Remove stagnant water sources around your home</li>
+              <li>Wear long sleeves at dusk and dawn</li>
+              <li>Visit a clinic immediately if you develop fever</li>
+            </ul>
+          </div>
+          <div class="article-card__footer">
+            <span class="article-card__author">Ministry of Health, SL</span>
+            <span class="article-card__date">March 2026</span>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card" data-cat="Maternal" data-title="Maternal & Child Health">
+          <div class="article-card__meta">
+            <span class="tag tag--green">SDG 3</span>
+            <span class="tag tag--rose">Maternal Health</span>
+          </div>
+          <h3 class="article-card__title">Maternal &amp; Child Health</h3>
+          <p class="article-card__excerpt">Sierra Leone has one of the highest maternal mortality rates globally. Antenatal care, skilled birth attendants, and postnatal support are critical to saving mothers' and babies' lives.</p>
+          <div class="article-card__tips">
+            <h4 class="tips__label">Key Tips</h4>
+            <ul class="tips__list">
+              <li>Attend all 8 recommended antenatal care visits</li>
+              <li>Deliver in a health facility with skilled staff</li>
+              <li>Breastfeed exclusively for the first 6 months</li>
+              <li>Immunise your child on the national schedule</li>
+            </ul>
+          </div>
+          <div class="article-card__footer">
+            <span class="article-card__author">UNICEF Sierra Leone</span>
+            <span class="article-card__date">March 2026</span>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card" data-cat="Hygiene" data-title="Clean Water & Sanitation">
+          <div class="article-card__meta">
+            <span class="tag tag--blue">SDG 6</span>
+            <span class="tag tag--teal">Hygiene</span>
+          </div>
+          <h3 class="article-card__title">Clean Water &amp; Sanitation</h3>
+          <p class="article-card__excerpt">Waterborne diseases like cholera and typhoid are entirely preventable. Access to clean water and proper sanitation practices save thousands of lives in Sierra Leone each year.</p>
+          <div class="article-card__tips">
+            <h4 class="tips__label">Key Tips</h4>
+            <ul class="tips__list">
+              <li>Boil or treat all drinking water before use</li>
+              <li>Wash hands with soap before eating and after using the toilet</li>
+              <li>Use latrines properly and maintain them clean</li>
+              <li>Keep food covered and stored safely away from flies</li>
+            </ul>
+          </div>
+          <div class="article-card__footer">
+            <span class="article-card__author">WHO Sierra Leone</span>
+            <span class="article-card__date">March 2026</span>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-card" data-cat="Mental" data-title="Mental Health Awareness">
+          <div class="article-card__meta">
+            <span class="tag tag--green">SDG 3</span>
+            <span class="tag tag--violet">Mental Health</span>
+          </div>
+          <h3 class="article-card__title">Mental Health Awareness</h3>
+          <p class="article-card__excerpt">Mental health is often overlooked in Sierra Leone. Post-conflict trauma, the Ebola legacy, poverty, and stigma create compounding barriers. Community support and awareness make a real difference.</p>
+          <div class="article-card__tips">
+            <h4 class="tips__label">Key Tips</h4>
+            <ul class="tips__list">
+              <li>Talk openly to someone you trust about your feelings</li>
+              <li>Seek help from a trained health worker or counsellor</li>
+              <li>Avoid self-medicating with alcohol or substances</li>
+              <li>Support community members who are visibly struggling</li>
+            </ul>
+          </div>
+          <div class="article-card__footer">
+            <span class="article-card__author">Mental Health Coalition SL</span>
+            <span class="article-card__date">April 2026</span>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="article-card" data-cat="Prevention" data-title="HIV/AIDS Prevention">
+          <div class="article-card__meta">
+            <span class="tag tag--green">SDG 3</span>
+            <span class="tag tag--amber">Prevention</span>
+          </div>
+          <h3 class="article-card__title">HIV/AIDS Prevention</h3>
+          <p class="article-card__excerpt">HIV/AIDS continues to affect thousands of Sierra Leoneans. Regular testing, consistent protection, and access to antiretroviral therapy are essential to halting the spread.</p>
+          <div class="article-card__tips">
+            <h4 class="tips__label">Key Tips</h4>
+            <ul class="tips__list">
+              <li>Get tested regularly — know your status</li>
+              <li>Use protection consistently with every partner</li>
+              <li>Know your partner's HIV status before sex</li>
+              <li>Seek antiretroviral therapy immediately if positive</li>
+            </ul>
+          </div>
+          <div class="article-card__footer">
+            <span class="article-card__author">NAS Sierra Leone</span>
+            <span class="article-card__date">April 2026</span>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="article-card" data-cat="Nutrition" data-title="Childhood Nutrition">
+          <div class="article-card__meta">
+            <span class="tag tag--orange">SDG 2</span>
+            <span class="tag tag--lime">Nutrition</span>
+          </div>
+          <h3 class="article-card__title">Childhood Nutrition</h3>
+          <p class="article-card__excerpt">Malnutrition affects nearly one-third of children under five in Sierra Leone. A diverse, balanced diet rich in local vegetables, proteins, and fruits supports healthy growth and brain development.</p>
+          <div class="article-card__tips">
+            <h4 class="tips__label">Key Tips</h4>
+            <ul class="tips__list">
+              <li>Feed children diverse, locally available nutritious foods</li>
+              <li>Include iron-rich foods like beans, fish, and dark leaves</li>
+              <li>Monitor your child's growth at clinic check-ups</li>
+              <li>Supplement with Vitamin A where available</li>
+            </ul>
+          </div>
+          <div class="article-card__footer">
+            <span class="article-card__author">WFP Sierra Leone</span>
+            <span class="article-card__date">April 2026</span>
+          </div>
+        </article>
+
+      </div><!-- /article-grid -->
+      <p class="no-results" id="noResults" style="display:none">No articles match your search.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ALERTS
+  ══════════════════════════════════════════ -->
+  <section class="section section--dark" id="alerts">
+    <div class="section__inner">
+      <div class="section__header section__header--light">
+        <span class="section__eyebrow section__eyebrow--light">Live Updates</span>
+        <h2 class="section__title section__title--light">Health Alerts &amp; Notifications</h2>
+        <p class="section__sub section__sub--light">Real-time outbreak warnings and health campaigns for Sierra Leone communities.</p>
+      </div>
+
+      <div class="alerts-grid">
+
+        <div class="alert-card alert-card--high">
+          <div class="alert-card__header">
+            <span class="alert-card__icon">🚨</span>
+            <div>
+              <span class="alert-card__level">High Alert</span>
+              <h3 class="alert-card__title">Cholera Alert – Western Area</h3>
+            </div>
+            <time class="alert-card__date">Jun 8, 2026</time>
+          </div>
+          <p class="alert-card__msg">Cases of cholera have been confirmed in parts of Freetown. Boil all drinking water before consuming. Avoid open defecation and wash hands with soap frequently.</p>
+        </div>
+
+        <div class="alert-card alert-card--medium">
+          <div class="alert-card__header">
+            <span class="alert-card__icon">📢</span>
+            <div>
+              <span class="alert-card__level">Notice</span>
+              <h3 class="alert-card__title">Free Malaria Testing – Bo District</h3>
+            </div>
+            <time class="alert-card__date">Jun 7, 2026</time>
+          </div>
+          <p class="alert-card__msg">Free rapid malaria tests are available at Bo Government Hospital this week. No appointment needed. Open Mon–Sat, 8 AM – 4 PM.</p>
+        </div>
+
+        <div class="alert-card alert-card--info">
+          <div class="alert-card__header">
+            <span class="alert-card__icon">ℹ️</span>
+            <div>
+              <span class="alert-card__level">Info</span>
+              <h3 class="alert-card__title">National Immunisation Week</h3>
+            </div>
+            <time class="alert-card__date">Jun 5, 2026</time>
+          </div>
+          <p class="alert-card__msg">Bring children aged 0–5 to any accredited health centre for free vaccinations from June 12–18. Protect your child and your community.</p>
+        </div>
+
+      </div>
+
+      <!-- Subscribe -->
+      <div class="subscribe-box">
+        <div class="subscribe-box__copy">
+          <h3 class="subscribe-box__title">Get alerts delivered to you</h3>
+          <p class="subscribe-box__sub">Receive outbreak warnings and health campaigns for your district by email.</p>
+        </div>
+        <form class="subscribe-box__form" id="subscribeForm" novalidate>
+          <input class="subscribe-box__input" type="email" placeholder="your@email.com" id="subscribeEmail" required />
+          <button class="btn btn--primary" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-box__privacy">🔒 Your email is used only for health alerts and is never shared. Sierra Leone data protection principles apply.</p>
+        <p class="subscribe-box__success" id="subscribeSuccess" style="display:none">✅ Subscribed! Alerts will be sent to your inbox.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       REPORT
+  ══════════════════════════════════════════ -->
+  <section class="section" id="report">
+    <div class="section__inner section__inner--narrow">
+      <div class="section__header">
+        <span class="section__eyebrow">Community Surveillance</span>
+        <h2 class="section__title">Report a Health Concern</h2>
+        <p class="section__sub">Help track disease outbreaks in your community. All reports are anonymous and used only for public health monitoring.</p>
+      </div>
+
+      <form class="report-form" id="reportForm" novalidate>
+
+        <div class="form-field">
+          <label class="form-field__label" for="districtInput">Your District or Location</label>
+          <input class="form-field__input" type="text" id="districtInput" placeholder="e.g. Freetown, Bo, Kenema, Makeni…" />
+        </div>
+
+        <div class="form-field">
+          <label class="form-field__label" for="concernInput">Describe the Health Concern</label>
+          <textarea class="form-field__textarea" id="concernInput" rows="5" placeholder="e.g. Several people in my community have had fever and vomiting since Monday. There may be a cholera outbreak…"></textarea>
+        </div>
+
+        <div class="form-field">
+          <label class="form-field__label" for="categorySelect">Category (optional)</label>
+          <select class="form-field__select" id="categorySelect">
+            <option value="">— Select a category —</option>
+            <option>Suspected Outbreak</option>
+            <option>Waterborne Disease</option>
+            <option>Respiratory Illness</option>
+            <option>Maternal / Child Health Emergency</option>
+            <option>Malnutrition</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="privacy-notice">
+          <span class="privacy-notice__icon">🔒</span>
+          <p><strong>Privacy:</strong> Reports are anonymous. No name, ID, or phone number is required. Data is used solely for public health monitoring under Sierra Leone's data protection principles.</p>
+        </div>
+
+        <button class="btn btn--primary btn--full" type="submit">Submit Report</button>
+      </form>
+
+      <div class="report-success" id="reportSuccess" style="display:none">
+        <span class="report-success__icon">✅</span>
+        <h3>Report Submitted</h3>
+        <p>Thank you for helping us protect your community. Your anonymous report has been recorded.</p>
+        <button class="btn btn--ghost" id="reportAgain">Submit another report</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ASK AI
+  ══════════════════════════════════════════ -->
+  <section class="section section--tinted" id="ask">
+    <div class="section__inner section__inner--narrow">
+      <div class="section__header">
+        <span class="section__eyebrow">Powered by Claude AI</span>
+        <h2 class="section__title">Ask the Health Assistant</h2>
+        <p class="section__sub">Type any health question. The assistant is contextualised for Sierra Leone and will always recommend consulting a qualified health worker for personal medical advice.</p>
+      </div>
+
+      <div class="ai-box">
+        <div class="ai-box__suggestions">
+          <span class="ai-box__suggest-label">Try asking:</span>
+          <button class="suggest-pill" data-q="How can I prevent malaria during the rainy season in Sierra Leone?">Malaria prevention</button>
+          <button class="suggest-pill" data-q="What are the signs of malnutrition in children under 5?">Child malnutrition</button>
+          <button class="suggest-pill" data-q="When should I go to a clinic for a fever?">When to seek care</button>
+          <button class="suggest-pill" data-q="How can I protect myself from cholera?">Cholera protection</button>
+        </div>
+
+        <div class="ai-box__input-row">
+          <textarea class="ai-box__textarea" id="aiInput" rows="3" placeholder="Ask a health question…"></textarea>
+          <button class="btn btn--primary ai-box__send" id="aiSend">Ask</button>
+        </div>
+
+        <div class="ai-box__response" id="aiResponse" style="display:none">
+          <div class="ai-box__response-header">
+            <span class="ai-box__robot">🩺</span>
+            <span class="ai-box__response-label">Health Assistant</span>
+            <button class="ai-box__clear" id="aiClear" title="Clear">✕</button>
+          </div>
+          <div class="ai-box__response-text" id="aiText"></div>
+          <div class="ai-box__loading" id="aiLoading" style="display:none">
+            <span class="dot-flashing"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__heart">♥</span>
+        <span class="footer__name">HealthAware SL</span>
+      </div>
+      <p class="footer__tagline">Digital Health Awareness for Sierra Leone</p>
+      <div class="footer__tags">
+        <span class="tag tag--mint-sm">MIT License</span>
+        <span class="tag tag--mint-sm">Open Source DPG</span>
+        <span class="tag tag--mint-sm">SDG 3 · 2 · 6</span>
+      </div>
+      <p class="footer__copy">DLAW207 Group Project · Limkokwing University of Creative Technology, Sierra Leone · 2026</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════ -->
+  <script>
+    // ── Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+
+    // ── Mobile burger
+    const burger = document.getElementById('burger');
+    burger.addEventListener('click', () => {
+      document.querySelector('.nav__links').classList.toggle('nav__links--open');
+    });
+
+    // ── Active nav link on scroll
+    const sections = document.querySelectorAll('section[id], .hero[id]');
+    const navLinks = document.querySelectorAll('.nav__link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('nav__link--active'));
+          const active = document.querySelector(`.nav__link[href="#${e.target.id}"]`);
+          if (active) active.classList.add('nav__link--active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+
+    // ── Article search + filter
+    const searchInput  = document.getElementById('searchInput');
+    const categoryTabs = document.getElementById('categoryTabs');
+    const articleCards = document.querySelectorAll('.article-card');
+    const noResults    = document.getElementById('noResults');
+
+    let activeCat = 'All';
+
+    function filterArticles() {
+      const q = searchInput.value.toLowerCase();
+      let visible = 0;
+      articleCards.forEach(card => {
+        const cat   = card.dataset.cat;
+        const title = card.dataset.title.toLowerCase();
+        const text  = card.innerText.toLowerCase();
+        const matchCat  = activeCat === 'All' || cat === activeCat;
+        const matchText = !q || title.includes(q) || text.includes(q);
+        const show = matchCat && matchText;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterArticles);
+
+    categoryTabs.addEventListener('click', e => {
+      if (!e.target.classList.contains('filter-tab')) return;
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('filter-tab--active'));
+      e.target.classList.add('filter-tab--active');
+      activeCat = e.target.dataset.cat;
+      filterArticles();
+    });
+
+    // ── Alert subscribe
+    document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('subscribeEmail').value;
+      if (!email.includes('@')) return;
+      this.style.display = 'none';
+      document.getElementById('subscribeSuccess').style.display = 'block';
+    });
+
+    // ── Report form
+    document.getElementById('reportForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const concern = document.getElementById('concernInput').value.trim();
+      if (!concern) return;
+      this.style.display = 'none';
+      document.getElementById('reportSuccess').style.display = 'flex';
+    });
+    document.getElementById('reportAgain').addEventListener('click', () => {
+      document.getElementById('reportForm').reset();
+      document.getElementById('reportForm').style.display = 'block';
+      document.getElementById('reportSuccess').style.display = 'none';
+    });
+
+    // ── Suggest pills
+    document.querySelectorAll('.suggest-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('aiInput').value = btn.dataset.q;
+        document.getElementById('aiInput').focus();
+      });
+    });
+
+    // ── AI Ask
+    document.getElementById('aiSend').addEventListener('click', askAI);
+    document.getElementById('aiInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); askAI(); }
+    });
+    document.getElementById('aiClear').addEventListener('click', () => {
+      document.getElementById('aiResponse').style.display = 'none';
+      document.getElementById('aiText').textContent = '';
+      document.getElementById('aiInput').value = '';
+    });
+
+    async function askAI() {
+      const q = document.getElementById('aiInput').value.trim();
+      if (!q) return;
+      const resp = document.getElementById('aiResponse');
+      const text = document.getElementById('aiText');
+      const load = document.getElementById('aiLoading');
+      resp.style.display = 'block';
+      text.textContent = '';
+      load.style.display = 'flex';
+      document.getElementById('aiSend').disabled = true;
+      try {
+        const res = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 1000,
+            system: 'You are a public health assistant for Sierra Leone. Give clear, accurate, plain-English answers about health topics relevant to Sierra Leone and West Africa. Focus on prevention, when to seek care, and local context. Always end by recommending users consult a qualified health worker for personal medical advice. Keep answers under 200 words.',
+            messages: [{ role: 'user', content: q }]
+          })
+        });
+        const data = await res.json();
+        const answer = data.content?.map(b => b.text || '').join('\n') || 'No response. Please try again.';
+        load.style.display = 'none';
+        text.textContent = answer;
+      } catch {
+        load.style.display = 'none';
+        text.textContent = 'The health assistant is temporarily unavailable. Please visit your nearest health centre.';
+      }
+      document.getElementById('aiSend').disabled = false;
+    }
+
+    // ── Scroll-reveal animation
+    const reveals = document.querySelectorAll('.article-card, .alert-card, .stat-card');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
